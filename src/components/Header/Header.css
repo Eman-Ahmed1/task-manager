@@ -1,0 +1,9 @@
+.header-container h1{
+    color: var(--color-text-primary);
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+.header-container p{
+    color: var(--color-text-secondary);
+    font-size: 16px;
+}
