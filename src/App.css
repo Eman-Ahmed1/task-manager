@@ -12,4 +12,10 @@
 }
 .task-controls{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.task-controls .searchBar{
+    width: 100px;
 }

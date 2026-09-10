@@ -7,7 +7,6 @@ import TaskList from './components/TaskList/TaskList'
 
 function App() {
   return (
-    <>
       <div className="container">
         <Header />
         <TaskForm />
@@ -17,7 +16,6 @@ function App() {
         </div>
         <TaskList />
       </div>
-    </>
   )
 }
 

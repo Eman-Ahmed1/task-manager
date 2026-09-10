@@ -7,6 +7,7 @@
   --color-background: #F9F8FF;
   --color-surface: #FFFFFF;
   --color-input-bg: #F1F3FF;
+  --color-white: #FFFFFF;
 
   /* Text */
   --color-text-primary: #0F172A;
@@ -30,4 +31,7 @@ html {
 }
 body{
     background-color: var(--color-background);
+}
+li{
+  list-style: none;
 }
