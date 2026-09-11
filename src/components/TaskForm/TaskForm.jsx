@@ -1,11 +1,13 @@
 import { useState } from "react"
 import "./TaskForm.css"
-export default function TaskForm() {
+export default function TaskForm({addTask}) {
     const [newTask , setNewTask ] = useState("");
 
     const handleSubmit = (e ) =>{
         e.preventDefault();
-        console.log(newTask)
+        addTask(newTask);
+
+        setNewTask(" ")
     }
     return (
         <div className="task-form">

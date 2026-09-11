@@ -13,6 +13,10 @@
 .task-form input::placeholder {
     color: var(--color-text-muted);
 }
+.task-form  input:focus{
+    border-color: rgb(88, 88, 212);
+    outline: none;
+}
 .task-form form button{
     width: 20%;
     height: 45px;

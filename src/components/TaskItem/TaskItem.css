@@ -1,0 +1,81 @@
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: rgb(112, 154, 112); */
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.task-item .task-title-container{
+    display: flex;
+    align-items: center;
+    gap:10px
+}
+.task-item:hover{
+    background-color: var(--color-input-bg);
+}
+.task-item .task-title-container .iscomplete{
+    color: rgb(21, 21, 211);
+}
+.task-item .task-title-container .title-complete{
+    color: var(--color-text-muted);
+    text-decoration: line-through;
+}
+.task-item .task-title-container .title-notComplete{
+    color:var(--color-text-primary)
+}
+.task-item .task-title-container .edit-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    gap:20px
+    
+}
+.task-item .task-title-container .edit-div .edit-input{
+    padding: 5px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+}
+.task-item .task-title-container .edit-div .edit-input:focus{
+    border-color: rgb(88, 88, 212);
+    outline: none;
+}
+.task-item .task-title-container .edit-div .edit-btn{
+    padding: 5px;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.task-item .task-title-container .edit-div .edit-btn:hover{
+    background-color: var(--color-primary-hover);
+}
+.task-item .task-title-container .edit-div .btn-taps{
+    display: flex;
+    align-items: center;
+    gap:5px
+}
+.task-item .icons{
+    display: flex;
+    align-items: center;
+    gap:20px;
+
+}
+.task-item .icons .edit{
+    padding: 5px;
+    border-radius: 5px;
+}
+.task-item .icons .edit:hover{
+    background-color: #d2d6ed;
+    color: var(--color-text-primary);
+}
+.task-item .icons .delete{
+    padding: 5px;
+    border-radius: 5px;
+}
+.task-item .icons .delete:hover{
+    background-color: #f2d1d1;
+    color: var(--color-danger);
+}
