@@ -1,0 +1,7 @@
+.counts{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    color: var(--color-text-secondary);
+    font-size: 12px;
+}

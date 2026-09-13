@@ -14,7 +14,10 @@ export default function TaskItem({ task, toggleTask, deleteTask, editTask }) {
     const handleSaveEdit = () => {
         editTask(task.id, editTitle)
         setIsEditing(false)
+    }
 
+    const handleCancelEdit = () => {
+        setIsEditing(false)
     }
 
 
@@ -46,7 +49,7 @@ export default function TaskItem({ task, toggleTask, deleteTask, editTask }) {
                         />
                         <div className="btn-taps">
                             <button className="edit-btn" onClick={handleSaveEdit}>Save</button>
-                            <button className="edit-btn" onClick={handleSaveEdit}>Cancel</button>
+                            <button className="edit-btn" onClick={handleCancelEdit}>Cancel</button>
                         </div>
                     </div>
                 }

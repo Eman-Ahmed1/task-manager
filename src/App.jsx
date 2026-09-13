@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState , useEffect } from 'react'
 import './App.css'
 import FilterTabs from './components/FilterTabs/FilterTabs'
 import Header from './components/Header/Header'
@@ -6,10 +6,24 @@ import SearchBar from './components/SearchBar/SearchBar'
 import TaskForm from './components/TaskForm/TaskForm'
 import TaskList from './components/TaskList/TaskList'
 
+// save tasks to localStorage
+const saveTasks = (tasks)=>{
+  localStorage.setItem("tasks", JSON.stringify(tasks))
+}
+
+// get tasks from localStorage
+const getTasks = () =>{
+  const savedTasks = localStorage.getItem("tasks");
+  return savedTasks ? JSON.parse(savedTasks) :[];
+}
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(getTasks);
   const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState("all")
+  const [filter, setFilter] = useState("all");
+
+  useEffect(()=>{
+    saveTasks(tasks);
+  },[tasks])
 
   // add task
   const addTask = (newTask) => {
@@ -91,6 +105,7 @@ function App() {
     <div className="container">
       <Header />
       <TaskForm addTask={addTask} />
+
       <div className="task-controls">
         <SearchBar
           onSearch={onSearch}
@@ -100,6 +115,7 @@ function App() {
           onFilter={onFilter}
         />
       </div>
+
       <TaskList
         tasks={filteredTasks}
         toggleTask={toggleTask}

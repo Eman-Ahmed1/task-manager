@@ -7,6 +7,7 @@
     border-radius: 5px;
     width: 250px;
     color: var(--color-text-secondary);
+    flex-wrap: wrap;
 }
 .filter-tabs li{
     margin: 2px;

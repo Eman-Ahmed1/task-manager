@@ -2,15 +2,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: rgb(112, 154, 112); */
     margin-bottom: 5px;
     border-radius: 5px;
     padding: 10px;
+    min-width: 0;
+    border-bottom: 1px solid var(--color-input-bg);
 }
 .task-item .task-title-container{
     display: flex;
     align-items: center;
-    gap:10px
+    gap:10px;
+    min-width: 0;
+    flex: 1;
 }
 .task-item:hover{
     background-color: var(--color-input-bg);
@@ -30,13 +33,20 @@
     align-items: center;
     justify-content: space-between; 
     width: 100%;
-    gap:20px
+    gap:20px;
+    min-width: 0;
+    width: auto;
+    flex: 1;
     
 }
 .task-item .task-title-container .edit-div .edit-input{
     padding: 5px;
     border: 1px solid var(--color-border);
     border-radius: 5px;
+    min-width: 0;
+    flex: 1;
+    width: 100%;
+
 }
 .task-item .task-title-container .edit-div .edit-input:focus{
     border-color: rgb(88, 88, 212);

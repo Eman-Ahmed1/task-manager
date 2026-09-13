@@ -16,6 +16,35 @@
     align-items: center;
     gap: 20px;
 }
-.task-controls .searchBar{
-    width: 100px;
+.task-controls .search-bar{
+   flex:1;
+}
+.task-controls .filter-tabs{
+    flex:1;
+}
+@media (max-width: 900px){
+    .task-controls{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .task-controls .search-bar,
+    .task-controls .filter-tabs {
+        width: 100%;
+  }
+}
+@media  (max-width: 768px){
+    .container{
+        width: 90%;
+        margin: 25px auto;
+        padding: 20px;
+    }
+}
+    
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+    gap: 18px;
+  }
 }
