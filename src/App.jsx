@@ -8,6 +8,8 @@ import TaskList from './components/TaskList/TaskList'
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState("all")
 
   // add task
   const addTask = (newTask) => {
@@ -44,27 +46,62 @@ function App() {
   }
 
   // edit
-  const editTask = (id , newTitle) => {
+  const editTask = (id, newTitle) => {
     setTasks(prevTasks =>
       prevTasks.map(item =>
-        item.id !== id ? item : 
-        {
-          ...item,
-          title: newTitle
-        }
+        item.id !== id ? item :
+          {
+            ...item,
+            title: newTitle
+          }
       )
     )
   }
+
+  // search task
+  const filteredTasks = tasks.filter(item => {
+    const searchMatches = item.title.toLowerCase().includes(search.toLowerCase());
+
+    let filterMatches;
+
+    if (filter === "all") {
+      filterMatches = true;
+    } else if (filter === "active") {
+      filterMatches = !item.completed;
+    } else if (filter === "completed") {
+      filterMatches = item.completed;
+    }
+    
+    return searchMatches && filterMatches;
+  }
+
+  )
+
+  // search funcrion
+  const onSearch = (value) => {
+    setSearch(value);
+  }
+
+  // filter tabs
+  const onFilter = (value) => {
+    setFilter(value);
+  }
+
   return (
     <div className="container">
       <Header />
       <TaskForm addTask={addTask} />
       <div className="task-controls">
-        <SearchBar />
-        <FilterTabs />
+        <SearchBar
+          onSearch={onSearch}
+          search={search}
+        />
+        <FilterTabs
+          onFilter={onFilter}
+        />
       </div>
       <TaskList
-        tasks={tasks}
+        tasks={filteredTasks}
         toggleTask={toggleTask}
         deleteTask={deleteTask}
         editTask={editTask}
