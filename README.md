@@ -1,16 +1,122 @@
-# React + Vite
+# Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and modern task manager built with React.
 
-Currently, two official plugins are available:
+The project allows users to create, edit, delete, search, filter, and complete their tasks. Tasks are also saved in the browser using Local Storage.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Add new tasks
+- Edit existing tasks
+- Delete tasks
+- Mark tasks as completed
+- Search tasks
+- Filter tasks by:
+  - All
+  - Active
+  - Completed
+- Clear completed tasks
+- Display active and completed task counts
+- Display an empty state when there are no tasks
+- Display a message when no tasks match the current search or filter
+- Persist tasks using Local Storage
+- Responsive design for desktop and mobile
+- Clean and reusable React components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built With
 
-## Expanding the ESLint configuration
+- React
+- JavaScript
+- CSS
+- React Icons
+- Local Storage
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Screenshots
+
+### Empty State
+
+The initial state when there are no tasks.
+
+![Empty State](./screenshots/empty-state.png)
+
+### Tasks
+
+The main application view with multiple tasks.
+
+![Tasks](./screenshots/tasks.png)
+
+### Mobile Responsive View
+
+The application adapted for smaller screen sizes.
+
+![Mobile](./screenshots/mobile.png)
+
+### Edit Task
+
+Editing an existing task.
+
+![Edit Task](./screenshots/edit-task.png)
+
+### Task Filters
+
+Filtering tasks by All, Active, and Completed.
+
+![Task Filters](./screenshots/filters.png)
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have Node.js installed on your machine.
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Eman-Ahmed1/task-manager.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd task-manager
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at the local development URL shown in your terminal.
+
+## What I Learned
+
+While building this project, I practiced:
+
+- Managing state with `useState`
+- Using `useEffect`
+- Passing data between components using props
+- Handling user events
+- Rendering lists with `map()`
+- Filtering data with `filter()`
+- Implementing search functionality
+- Implementing filtering logic
+- Conditional rendering
+- Updating objects inside arrays
+- Working with Local Storage
+- Using `JSON.stringify()` and `JSON.parse()`
+- Creating reusable React components
+- Building responsive layouts with CSS
+- Organizing a React project into reusable components
+
+## Author
+Eman Ahmed Kamal
