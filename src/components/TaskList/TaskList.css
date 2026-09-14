@@ -1,7 +1,41 @@
-.counts{
+.counts , .counts-info{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap:10px;
     color: var(--color-text-secondary);
     font-size: 12px;
+}
+.clear{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.clear button{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px ;
+    border: none;
+    border-radius: 5px;
+}
+.clear button:hover{
+    background-color: var(--color-primary-hover);
+}
+.noTask{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.noTask .icon-noTask{
+    background-color: var(--color-input-bg);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
+    color: var(--color-text-secondary);
+}
+.noTask p{
+    color:var(--color-text-secondary);
+    font-size: 12px;
+    margin: 5px;
 }

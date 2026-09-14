@@ -101,6 +101,11 @@ function App() {
     setFilter(value);
   }
 
+  // Clear
+  const onClear = () =>{
+    setTasks(prevTasks => prevTasks.filter(item => !item.completed))
+  }
+
   return (
     <div className="container">
       <Header />
@@ -113,14 +118,18 @@ function App() {
         />
         <FilterTabs
           onFilter={onFilter}
+          filter={filter}
         />
       </div>
 
       <TaskList
-        tasks={filteredTasks}
+
+        tasks={tasks}
+        filteredTasks={filteredTasks}
         toggleTask={toggleTask}
         deleteTask={deleteTask}
         editTask={editTask}
+        onClear={onClear}
       />
     </div>
   )
